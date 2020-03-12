@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../src/assets/scss/variable";
+@import "../src/assets/scss/fonts";
+
+html,
+body,
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: $black;
+}
+
+* {
+  font-family: $mo-medium;
+  font-size: 14px;
+  color: $white;
+}
+
+.clear {
+  clear: both;
+}
