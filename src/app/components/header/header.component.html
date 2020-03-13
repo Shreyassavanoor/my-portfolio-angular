@@ -1,6 +1,6 @@
 <nav class="header" (window:resize)="resize()">
     <ul>
-        <li *ngFor = "let header of headersList" [routerLink]="[header.navigate]" [routerLinkActiveOptions]="{exact: true}">
+        <li *ngFor = "let header of headersList" [routerLink]="[header.navigate]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
             <span *ngIf="!mobileView" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{header.label}}</span>
             <i *ngIf="mobileView" class="{{header.icon}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"></i>
         </li>
