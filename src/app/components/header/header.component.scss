@@ -1,0 +1,31 @@
+@import "../../../assets/scss/variable";
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 60px;
+  box-sizing: border-box;
+  background: $nav-background;
+  border-bottom: 3px solid $nav-border;
+  > ul {
+    > li {
+      display: inline-block;
+      padding: 20px;
+      cursor: pointer;
+      font-size: 16px;
+      font-family: $mo-semibold;
+      &:hover {
+        color: $nav-hover;
+      }
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+}
+
+.active {
+  color: $nav-hover;
+}

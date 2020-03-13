@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../src/assets/scss/variable";
 @import "../src/assets/scss/fonts";
+$fa-font-path: "../node_modules/font-awesome/fonts";
+@import '~font-awesome/scss/font-awesome.scss';
 
 html,
 body,
@@ -21,13 +23,13 @@ h6 {
 html,
 body {
   height: 100%;
-  background-color: $black;
+  background-color: $background;
 }
 
 * {
   font-family: $mo-medium;
   font-size: 14px;
-  color: $white;
+  color: $darkmode-text-color;
 }
 
 .clear {

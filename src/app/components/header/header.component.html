@@ -1,0 +1,7 @@
+<nav class="header">
+    <ul>
+        <li *ngFor = "let header of headersList" [routerLink]="[header.navigate]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            {{header.label}}
+        </li>
+    </ul>
+</nav>
