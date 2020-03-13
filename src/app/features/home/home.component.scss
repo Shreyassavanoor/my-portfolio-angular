@@ -21,3 +21,18 @@
     }
   }
 }
+
+@media screen and (max-width: 425px) {
+    .home {
+        > div {
+            > p {
+                font-size: 22px;
+                &:nth-child(2) {
+                    > span {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
