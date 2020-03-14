@@ -1,7 +1,7 @@
 <div class="about">
     <div class="about-me-section">
         <div [ngStyle]="{'display': mobileView ? 'block': 'none'}" (window:resize)="resize()">
-            Image goes here
+            <img src="../../../assets/images/MY_PIC.jpg">
         </div>
         <div>
             <p class="header"><span>About Me</span></p>
@@ -10,7 +10,7 @@
             </p>
         </div>
         <div [ngStyle]="{'display': mobileView ? 'none': ''}" (window:resize)="resize()">
-            Image goes here
+            <img src="../../../assets/images/MY_PIC.jpg">
         </div>
     </div>
     <div class="skills">
