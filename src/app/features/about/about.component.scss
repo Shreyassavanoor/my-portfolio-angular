@@ -1,0 +1,89 @@
+@import "../../../assets/scss/variable";
+
+.about {
+  width: 75%;
+  margin: 0 auto;
+  .about-me-section {
+    > div {
+      padding-top: 70px;
+      &:nth-child(2){
+        display: inline-block;
+        width: 75%;
+        > p {
+          text-align: justify;
+          font-size: 16px;
+          padding: 15px 0 15px 0;
+        }
+      }
+      &:nth-child(3) {
+        display: inline-block;
+        width: 25%;
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+.header {
+  text-align: center !important;
+  > span {
+    text-transform: uppercase;
+    font-size: 28px;
+    border-bottom: 5px solid $nav-hover;
+  }
+}
+
+.skills {
+  > div {
+    &:first-child {
+      width: 75%;
+    }
+    &:nth-child(2) {
+      margin-top: 10px;
+      > ul {
+        > li {
+          list-style-type: none;
+          padding: 10px;
+          display: inline-block;
+          &:first-child {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .about {
+    .about-me-section {
+      > div {
+        padding-top: 0px;
+        &:first-child {
+          display: block;
+          width: 100%;
+          > p {
+            font-size: 16px;
+            padding: 15px 0 15px 0;
+          }
+        }
+        &:nth-child(2) {
+          display: block;
+          width: 100%;
+          > p {
+            font-size: 16px;
+            padding: 15px 0 15px 0;
+          }
+        }
+      }
+    }
+  }
+
+  .skills {
+    > div {
+      &:first-child {
+        width: 100%;
+      }
+    }
+  }
+}

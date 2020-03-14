@@ -1,1 +1,28 @@
-<p>about works!</p>
+<div class="about">
+    <div class="about-me-section">
+        <div [ngStyle]="{'display': mobileView ? 'block': 'none'}" (window:resize)="resize()">
+            Image goes here
+        </div>
+        <div>
+            <p class="header"><span>About Me</span></p>
+            <p *ngFor = "let bio of myBioLists">
+                {{bio.text}}
+            </p>
+        </div>
+        <div [ngStyle]="{'display': mobileView ? 'none': ''}" (window:resize)="resize()">
+            Image goes here
+        </div>
+    </div>
+    <div class="skills">
+        <div>
+            <p class="header"><span>My Skills</span></p>
+        </div>
+        <div>
+            <ul>
+                <li *ngFor="let skill of mySkills">
+                    {{skill.text}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
