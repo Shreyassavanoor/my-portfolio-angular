@@ -12,7 +12,7 @@ export class AboutComponent implements OnInit {
             text: "Hi, I am Shreyas Savanoor Ravindra. Welcome to my world!!"
         },
         {
-            text: "I am pursuing master's in Computer Science at University of North Carolina at Charlotte."
+            text: "I am currently working as Frontend Engineer in Recruiterflow."
         },
         {
             text: "I have 33 months of industry experience working as Software Development Engineer. In my tenure of 33 months, I have worked in both MNC and an early stage start-up."

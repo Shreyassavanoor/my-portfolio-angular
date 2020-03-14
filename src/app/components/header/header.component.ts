@@ -31,6 +31,11 @@ export class HeaderComponent implements OnInit {
 
     socialProfiles = [
         {
+            label: 'Email',
+            link: 'mailto:shreyas.savanoor2612@gmail.com',
+            icon: 'fa fa-envelope'
+        },
+        {
             label: 'LinkedIn',
             link: 'https://www.linkedin.com/in/shreyas-savanoor-b9911211a/',
             icon: 'fa fa-linkedin'

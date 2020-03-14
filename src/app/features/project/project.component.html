@@ -1,1 +1,12 @@
-<p>project works!</p>
+<div class="project">
+    <div>
+        <p><span>Projects</span></p>
+        <div>
+            <div *ngFor = "let project of myProjects">
+                <label>{{project.title}}</label>
+                <p>{{project.description}}</p>
+                <span><span>Environment: </span>{{project.env}}</span>
+            </div>
+        </div>
+    </div>
+</div>

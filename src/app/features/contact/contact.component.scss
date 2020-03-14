@@ -1,0 +1,68 @@
+@import "../../../assets/scss/variable";
+
+.contact {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  > div {
+    padding-top: 70px;
+    > p {
+      width: 100%;
+      text-align: center;
+      > span {
+        text-transform: uppercase;
+        font-size: 28px;
+        border-bottom: 5px solid $nav-hover;
+      }
+    }
+    > ul {
+      display: inline-block;
+      > li {
+        list-style-type: none;
+        padding: 20px;
+        border: 2px solid $nav-hover;
+        margin-top: 25px;
+        i {
+          color: $white;
+          font-size: 28px;
+          &:hover{
+              color: $nav-hover;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .contact {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    > div {
+      padding-top: 15px;
+      > p {
+        width: 100%;
+        text-align: center;
+        > span {
+          text-transform: uppercase;
+          font-size: 28px;
+          border-bottom: 5px solid $nav-hover;
+        }
+      }
+      > ul {
+        display: inline-block;
+        > li {
+          list-style-type: none;
+          padding: 20px;
+          border: 2px solid $white;
+          margin-top: 25px;
+          i {
+            color: $nav-hover;
+            font-size: 28px;
+          }
+        }
+      }
+    }
+  }
+}
