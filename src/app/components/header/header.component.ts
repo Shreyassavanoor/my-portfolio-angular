@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
     selector: 'app-header',
@@ -9,21 +9,25 @@ export class HeaderComponent implements OnInit {
     headersList = [
         {
             label: 'HOME',
+            scroll: 'home',
             navigate: '',
             icon: 'fa fa-home'
         },
         {
             label: 'ABOUT',
+            scroll: 'about',
             navigate: '/about',
             icon: 'fa fa-info-circle'
         },
         {
             label: 'PROJECTS',
+            scroll: 'projects',
             navigate: '/projects',
             icon: 'fa fa-tasks'
         },
         {
             label: 'CONTACT',
+            scroll: 'contact',
             navigate: '/contact',
             icon: 'fa fa-address-card'
         }
@@ -65,6 +69,10 @@ export class HeaderComponent implements OnInit {
         } else {
             this.mobileView = false;
         }
+    }
+
+    scroll(target){
+        document.getElementById(target).scrollIntoView({behavior: 'smooth'});
     }
     
 }

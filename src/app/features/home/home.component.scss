@@ -1,51 +1,71 @@
 @import "../../../assets/scss/variable";
 
 .home {
-  width: 100%;
-  height: 100%;
+  padding-top: 60px;
+  width: 100vw;
+  height: calc(100vh - 60px);
+  background: url("../../../assets/images/pencil.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   > div {
-    position: relative;
-    left: 50%;
-    top: 40%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    > p {
-      font-size: 40px;
-      text-align: center;
-      &:nth-child(2) {
-        color: $nav-hover;
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    > div {
+      position: relative;
+      left: 50%;
+      top: 40%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      > p {
+        font-size: 48px;
+        font-family: $ps-bold;
+        text-align: center;
+        &:nth-child(2) {
+          color: $nav-hover;
+          > span {
+            font-size: 40px;
+          }
+        }
+      }
+      > div {
+        margin-top: 20px;
+        text-align: center;
         > span {
           font-size: 40px;
+          border-right: 0.08em solid $white;
         }
       }
     }
-    > div {
-      margin-top: 20px;
-      text-align: center;
-      > span {
-        font-size: 40px;
-        border-right: 0.08em solid $white;
-      }
-    }
+  }
+  > span {
+      position: absolute;
+      bottom: 0;
+      right: 0;
   }
 }
 
 @media screen and (max-width: 425px) {
   .home {
     > div {
-      > p {
-        font-size: 24px;
-        &:nth-child(2) {
-          > span {
-            font-size: 24px;
+      > div {
+        top: 40%;
+        > p {
+          font-size: 24px;
+          &:nth-child(2) {
+            > span {
+              font-size: 22px;
+            }
           }
         }
-      }
-      > div {
-        text-align: center;
-        > span {
-          font-size: 24px;
-          border-right: 0.08em solid $white;
+        > div {
+          text-align: center;
+          > span {
+            font-size: 22px;
+            border-right: 0.08em solid $white;
+          }
         }
       }
     }

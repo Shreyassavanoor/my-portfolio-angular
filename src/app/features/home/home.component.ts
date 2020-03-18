@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-    typewriter_text = ["I Love Python.", "I Love Data Science.", "I Love Image Processing.", "I Love Sleeping."];
+    typewriter_text = ["I Love Python.", "I Love Data Science.", "I Love Image Processing."];
     index = 0;
     typewriter_display: string = "";
     constructor() { }
