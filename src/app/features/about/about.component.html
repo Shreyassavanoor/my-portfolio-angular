@@ -5,9 +5,10 @@
         </div>
         <div>
             <p class="header"><span>About Me</span></p>
-            <p *ngFor = "let bio of myBioLists">
+            <p>{{bio}}</p>
+            <!-- <p *ngFor = "let bio of myBioLists">
                 {{bio.text}}
-            </p>
+            </p> -->
         </div>
         <div [ngStyle]="{'display': mobileView ? 'none': ''}" (window:resize)="resize()">
             <img src="../../../assets/images/MY_PIC.jpg">
@@ -20,7 +21,7 @@
         <div>
             <ul>
                 <li *ngFor="let skill of mySkills">
-                    {{skill.text}}
+                    {{skill.name}}
                 </li>
             </ul>
         </div>

@@ -22,5 +22,4 @@ export class FooterComponent implements OnInit {
             this.mobileView = false;
         }
     }
-
 }

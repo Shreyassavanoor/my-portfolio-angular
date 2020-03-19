@@ -14,6 +14,10 @@
           text-align: justify;
           font-size: 16px;
           padding: 15px 0 15px 0;
+          line-height: 30px;
+          word-spacing: 5px;
+          letter-spacing: 1px;
+          font-family: $ps-light;
         }
       }
       &:nth-child(3) {
@@ -39,7 +43,7 @@
 }
 
 .skills {
-    margin-top: 20px;
+  margin-top: 20px;
   > div {
     &:first-child {
       padding-right: 20px;
