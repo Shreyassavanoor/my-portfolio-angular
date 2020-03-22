@@ -2,7 +2,7 @@
 
 .contact {
   width: 75%;
-  margin: 0 auto;
+  margin: 0 auto 50px auto;
   text-align: center;
   > div {
     padding-top: 70px;
@@ -16,18 +16,24 @@
       }
     }
     > ul {
-      display: inline-block;
+      width: 75%;
+      display: flex;
+      justify-content: space-between;
+      margin: 30px auto 0 auto;
       > li {
         list-style-type: none;
-        padding: 20px;
+        display: inline-block;
+        padding: 25px;
         border: 2px solid $nav-hover;
-        margin-top: 25px;
+        &:hover {
+          cursor: pointer;
+          i {
+            color: $nav-hover;
+          }
+        }
         i {
           color: $white;
           font-size: 28px;
-          &:hover{
-              color: $nav-hover;
-          }
         }
       }
     }
@@ -37,7 +43,7 @@
 @media screen and (max-width: 425px) {
   .contact {
     width: 75%;
-    margin: 0 auto;
+    margin: 0 auto 90px auto;
     text-align: center;
     > div {
       padding-top: 15px;
@@ -51,16 +57,21 @@
         }
       }
       > ul {
-        display: inline-block;
+        width: 100%;
         > li {
           list-style-type: none;
-          padding: 20px;
+          padding: 10px;
           border: 2px solid $white;
-          margin-top: 25px;
           i {
             color: $nav-hover;
             font-size: 28px;
           }
+        }
+      }
+      > div {
+          margin-top: 15px;
+          .fa-heart {
+            color: $nav-hover;
         }
       }
     }

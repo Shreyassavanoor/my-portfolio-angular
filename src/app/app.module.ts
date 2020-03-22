@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -10,6 +10,7 @@ import { ContactComponent } from './features/contact/contact.component';
 import { ProjectComponent } from './features/project/project.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { BarChartComponent } from './components/shared/bar-chart/bar-chart.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +20,17 @@ import { FooterComponent } from './components/footer/footer.component';
     ContactComponent,
     ProjectComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    BarChartComponent
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    Title
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

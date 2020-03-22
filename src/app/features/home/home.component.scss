@@ -10,64 +10,99 @@
   -o-background-size: cover;
   background-size: cover;
   > div {
-    width: 70%;
-    height: 100%;
-    margin: 0 auto;
-    > div {
-      position: relative;
-      left: 50%;
-      top: 40%;
-      -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      > p {
-        font-size: 48px;
-        font-family: $ps-bold;
-        text-align: center;
-        &:nth-child(2) {
-          color: $nav-hover;
-          > span {
-            font-size: 40px;
-          }
-        }
-      }
+    &:first-child {
+      width: 70%;
+      height: 100%;
+      margin: 0 auto;
       > div {
-        margin-top: 20px;
-        text-align: center;
-        > span {
-          font-size: 40px;
-          border-right: 0.08em solid $white;
-        }
-      }
-    }
-  }
-  > span {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .home {
-    > div {
-      > div {
+        position: relative;
+        left: 50%;
         top: 40%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
         > p {
-          font-size: 24px;
+          font-size: 48px;
+          font-family: $ps-bold;
+          text-align: center;
           &:nth-child(2) {
+            color: $nav-hover;
             > span {
-              font-size: 22px;
+              font-size: 40px;
             }
           }
         }
         > div {
+          margin-top: 20px;
           text-align: center;
           > span {
-            font-size: 22px;
+            font-size: 40px;
             border-right: 0.08em solid $white;
           }
         }
       }
     }
+    &:nth-child(2) {
+      position: absolute;
+      left: 50%;
+      bottom: 10px;
+      font-size: 40px;
+      transform: translateX(-50%);
+      animation: fade_move_down 2s ease-in-out infinite;
+      cursor: pointer;
+      &:hover,
+      > i:hover {
+        color: $nav-hover;
+      }
+      &:focus,
+      > i:focus {
+        outline: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .home {
+    padding-top: 0;
+    > div {
+      &:first-child {
+        > div {
+          top: 40%;
+          > p {
+            font-size: 24px;
+            &:nth-child(2) {
+              > span {
+                font-size: 22px;
+              }
+            }
+          }
+          > div {
+            text-align: center;
+            > span {
+              font-size: 22px;
+              border-right: 0.08em solid $white;
+            }
+          }
+        }
+      }
+      &:nth-child(2) {
+        font-size: 30px;
+        bottom: 70px;
+      }
+    }
+  }
+}
+
+@keyframes fade_move_down {
+  0% {
+    transform: translate(-50%, -10px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 10px);
+    opacity: 0;
   }
 }

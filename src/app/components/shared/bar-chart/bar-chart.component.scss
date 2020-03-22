@@ -1,0 +1,28 @@
+@import "../../../../assets/scss/variable";
+
+.bar {
+    fill: $nav-hover;
+}
+
+.skills-chart {
+    margin-top: 30px;
+    > div {
+        width: 75%;
+        height: 350px;
+        margin: 0 auto;
+    }
+}
+
+.yAxisLabel, .bar-text {
+    fill: $white;
+}
+
+@media screen and (max-width: 425px) {
+    .skills-chart {
+        overflow-x: scroll;
+        > div {
+            width: 150%;
+            height: 500px;
+        }
+    }
+}

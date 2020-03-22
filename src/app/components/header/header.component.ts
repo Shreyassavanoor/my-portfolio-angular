@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { CommonServiceService } from '../../services/common-service.service';
 
 @Component({
     selector: 'app-header',
@@ -31,7 +32,7 @@ export class HeaderComponent implements OnInit {
             navigate: '/contact',
             icon: 'fa fa-address-card'
         }
-    ]; 
+    ];
 
     socialProfiles = [
         {
@@ -56,23 +57,13 @@ export class HeaderComponent implements OnInit {
         }
     ];
 
-    mobileView = false;
-    constructor() { }
+    constructor(private commonService: CommonServiceService) { }
 
     ngOnInit(): void {
-        this.resize();
     }
 
-    resize() {
-        if(window.innerWidth < 768) {
-            this.mobileView = true;
-        } else {
-            this.mobileView = false;
-        }
+    scroll(target) {
+        this.commonService.scroll(target);
     }
 
-    scroll(target){
-        document.getElementById(target).scrollIntoView({behavior: 'smooth'});
-    }
-    
 }

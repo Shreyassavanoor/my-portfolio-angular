@@ -1,11 +1,11 @@
-<nav class="header" (window:resize)="resize()">
+<nav class="header">
     <ul>
         <li *ngFor = "let header of headersList" (click)="scroll(header.scroll)" [routerLink]="[header.navigate]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-            <span *ngIf="!mobileView" [routerLink]="[header.navigate]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{header.label}}</span>
-            <i *ngIf="mobileView" class="{{header.icon}}" [routerLink]="[header.navigate]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"></i>
+            <span class="display-desktop" [routerLink]="[header.navigate]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{header.label}}</span>
+            <i class="{{header.icon}} display-mobile" [routerLink]="[header.navigate]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"></i>
         </li>
     </ul>
-    <ul *ngIf="!mobileView">
+    <ul class="display-desktop">
         <li *ngFor = "let social of socialProfiles" class="social-profiles">
             <a href="{{social.link}}" target="_blank">
                 <i class={{social.icon}}></i>

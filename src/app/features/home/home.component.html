@@ -8,5 +8,7 @@
             </div>
         </div>
     </div>
-    <span>Photo by Kelly Sikkema on Unsplash</span>
+    <div (click)="scroll('about')" [routerLink]="['/about']">
+        <i class="fa fa-angle-down" (click)="scroll('about')" [routerLink]="['/about']"></i>
+    </div>
 </div>

@@ -31,6 +31,7 @@
         }
         p,
         span {
+          word-break: break-all;  
           color: $darkmode-text-color-2;
           margin: 5px 0 5px 0;
         }
