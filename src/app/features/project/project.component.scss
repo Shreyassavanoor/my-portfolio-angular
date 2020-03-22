@@ -26,17 +26,16 @@
         > label {
           display: inline-block;
           font-family: $mo-bold;
-          text-decoration: underline;
           margin: 5px 0 5px 0;
         }
-        p,
-        span {
-          word-break: break-all;  
-          color: $darkmode-text-color-2;
-          margin: 5px 0 5px 0;
+        > p, > span > span , > span > label , > span > label > span{
+            color: $darkmode-text-color-2;
         }
-        span {
-          font-family: $mo-light;
+        > p, > span {
+            margin: 5px 0 5px 0;
+        }
+        > span > span , > span > label , > span > label > span {
+            font-family: $mo-light;
         }
       }
     }

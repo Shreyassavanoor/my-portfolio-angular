@@ -18,11 +18,11 @@ export class ProjectComponent implements OnInit {
 
     fetchProjects() {
         this.commonservice.getData('/projects').subscribe((response: any) => {
-            let data = response;
-            for (let d = 0; d < data.length; d++) {
-                data[d].env = data[d].env.join(',');
-            }
-            this.myProjects = data;
+            //let data = response;
+            // for (let d = 0; d < data.length; d++) {
+            //     data[d].env = data[d].env.join(',');
+            // }
+            this.myProjects = response;
         });
     }
 

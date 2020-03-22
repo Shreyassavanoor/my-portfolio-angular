@@ -5,7 +5,13 @@
             <div *ngFor = "let project of myProjects">
                 <label>{{project.title}}</label>
                 <p>{{project.description}}</p>
-                <span><span>Environment: </span>{{project.env}}</span>
+                <span>
+                    <span>Environment: </span>
+                    <label *ngFor = "let env of project.env; let i = index">
+                        {{env}}
+                        <span *ngIf="project.env.length !== (i + 1)">,</span>
+                    </label>
+                </span>
             </div>
         </div>
     </div>
