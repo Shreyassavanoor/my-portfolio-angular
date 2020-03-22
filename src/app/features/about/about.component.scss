@@ -12,8 +12,10 @@
         width: calc(75% - 20px);
         > p {
           text-align: justify;
-          font-size: 16px;
+          font-size: 18px;
           padding: 15px 0 15px 0;
+          line-height: 30px;
+          font-family: $ps-light;
         }
       }
       &:nth-child(3) {
@@ -39,26 +41,7 @@
 }
 
 .skills {
-    margin-top: 20px;
-  > div {
-    &:first-child {
-      padding-right: 20px;
-      width: calc(75% - 20px);
-    }
-    &:nth-child(2) {
-      margin-top: 10px;
-      > ul {
-        > li {
-          list-style-type: none;
-          padding: 10px;
-          display: inline-block;
-          &:first-child {
-            padding-left: 0;
-          }
-        }
-      }
-    }
-  }
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 425px) {
@@ -80,7 +63,13 @@
           > p {
             font-size: 16px;
             padding: 15px 0 15px 0;
+            line-height: unset;
+            word-spacing: unset;
+            letter-spacing: unset;
           }
+        }
+        &:nth-child(3) {
+            display: none;
         }
       }
     }

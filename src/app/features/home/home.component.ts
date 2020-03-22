@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonServiceService } from '../../services/common-service.service';
 
 @Component({
     selector: 'app-home',
@@ -7,13 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-    typewriter_text = ["I Love Python.", "I Love Data Science.", "I Love Image Processing.", "I Love Sleeping."];
+    typewriter_text: any = [];
     index = 0;
     typewriter_display: string = "";
-    constructor() { }
+    constructor(private commonService: CommonServiceService) { }
 
     ngOnInit(): void {
-        this.typingCallback();
+        this.commonService.getData('/typewritter-text').subscribe((response) => {
+            this.typewriter_text = response;
+            this.typingCallback();
+        }); 
     }
 
     typingCallback() {
@@ -56,5 +60,9 @@ export class HomeComponent implements OnInit {
                 this.clearTypingText(this.typewriter_display);
             }, 200);
         }
+    }
+
+    scroll(target) {
+        this.commonService.scroll(target);
     }
 }

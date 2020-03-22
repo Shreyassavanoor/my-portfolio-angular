@@ -1,15 +1,13 @@
-<div class="about">
+<div class="about" id='about'>
     <div class="about-me-section">
-        <div [ngStyle]="{'display': mobileView ? 'block': 'none'}" (window:resize)="resize()">
+        <div class="display-mobile">
             <img src="../../../assets/images/MY_PIC.jpg">
         </div>
         <div>
             <p class="header"><span>About Me</span></p>
-            <p *ngFor = "let bio of myBioLists">
-                {{bio.text}}
-            </p>
+            <p>{{bio}}</p>
         </div>
-        <div [ngStyle]="{'display': mobileView ? 'none': ''}" (window:resize)="resize()">
+        <div class="display-desktop">
             <img src="../../../assets/images/MY_PIC.jpg">
         </div>
     </div>
@@ -18,11 +16,7 @@
             <p class="header"><span>My Skills</span></p>
         </div>
         <div>
-            <ul>
-                <li *ngFor="let skill of mySkills">
-                    {{skill.text}}
-                </li>
-            </ul>
+            <app-bar-chart [skills]="mySkills"></app-bar-chart>
         </div>
     </div>
 </div>

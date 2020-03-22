@@ -9,6 +9,7 @@
   box-sizing: border-box;
   background: $nav-background;
   border-bottom: 3px solid $nav-border;
+  z-index: 999;
   > ul {
     display: inline-block;
     > li {
@@ -19,8 +20,11 @@
       > span {
         font-size: 18px;
         &:hover {
-            color: $nav-hover;
-          }
+          color: $nav-hover;
+        }
+        &:focus {
+          outline: 0;
+        }
       }
       &:focus {
         outline: 0;
@@ -60,6 +64,9 @@
       > li {
         i {
           font-size: 24px;
+          &:focus{
+              outline: 0;
+          }
         }
       }
     }

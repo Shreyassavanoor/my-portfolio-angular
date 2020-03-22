@@ -9,18 +9,6 @@ export class FooterComponent implements OnInit {
 
     constructor() { }
 
-    mobileView = false;
-
     ngOnInit() {
-        this.resize();
     }
-
-    resize() {
-        if (window.innerWidth < 768) {
-            this.mobileView = true;
-        } else {
-            this.mobileView = false;
-        }
-    }
-
 }
