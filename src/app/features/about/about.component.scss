@@ -44,6 +44,36 @@
   margin-top: 20px;
 }
 
+.resume {
+  background-color: $nav-hover;
+  color: $white;
+  text-decoration: none;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  outline: 0;
+  border: none;
+  width: calc(100% - 30px);
+}
+
+.view-resume,
+.download-resume {
+  text-align: center;
+}
+
+.view-resume{
+    display: inline-block;
+}
+
+.download-resume {
+    width: 100%;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+  color: $white;
+}
+
 @media screen and (max-width: 425px) {
   .about {
     .about-me-section {
@@ -69,7 +99,7 @@
           }
         }
         &:nth-child(3) {
-            display: none;
+          display: none;
         }
       }
     }
@@ -81,5 +111,37 @@
         width: 100%;
       }
     }
+  }
+
+  .display-flex {
+    display: flex;
+  }
+
+  .view-resume,
+  .download-resume {
+    flex: 1;
+    text-align: center;
+    padding: 0;
+    margin: 2px;
+  }
+
+  .view-resume {
+      display: initial;
+  }
+
+  .download-resume {
+      display: initial;
+  }
+
+  .resume {
+    background-color: $nav-hover;
+    color: $white;
+    text-decoration: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    outline: 0;
+    border: none;
+    width: initial;
   }
 }
