@@ -1,0 +1,41 @@
+<div class="about" id='about'>
+    <div class="about-me-section">
+        <div class="display-mobile">
+            <img src="../../../assets/images/MY_PIC.jpg">
+            <div class="display-flex display-mobile">
+                <div class="view-resume display-mobile resume">
+                    <a href="{{myResume}}" target="_blank" class="text-decoration-none">
+                        View My Resume
+                    </a>
+                </div>
+                <div class="download-resume display-mobile">
+                    <button class="resume" (click)="downloadResume()">
+                        Download My Resume
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div>
+            <p class="header"><span>About Me</span></p>
+            <p>{{bio}}</p>
+        </div>
+        <div class="display-desktop">
+            <img src="../../../assets/images/MY_PIC.jpg">
+            <a href="{{myResume}}" target="_blank" class="resume view-resume" style="margin: 10px 0 10px 0;">
+                View My Resume
+            </a>
+            <button class="resume download-resume"  (click)="downloadResume()">
+                Download My Resume
+            </button>
+        </div>
+    </div>
+    <div class="skills">
+        <div>
+            <p class="header"><span>My Skills</span></p>
+        </div>
+        <div>
+            <app-bar-chart [skills]="mySkills"></app-bar-chart>
+        </div>
+    </div>
+</div>

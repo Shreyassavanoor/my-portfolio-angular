@@ -1,0 +1,79 @@
+@import "../../../assets/scss/variable";
+
+.contact {
+  width: 75%;
+  margin: 0 auto 50px auto;
+  text-align: center;
+  > div {
+    padding-top: 70px;
+    > p {
+      width: 100%;
+      text-align: center;
+      > span {
+        text-transform: uppercase;
+        font-size: 28px;
+        border-bottom: 5px solid $nav-hover;
+      }
+    }
+    > ul {
+      width: 75%;
+      display: flex;
+      justify-content: space-between;
+      margin: 30px auto 0 auto;
+      > li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 25px;
+        border: 2px solid $nav-hover;
+        &:hover {
+          cursor: pointer;
+          i {
+            color: $nav-hover;
+          }
+        }
+        i {
+          color: $white;
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .contact {
+    width: 75%;
+    margin: 0 auto 90px auto;
+    text-align: center;
+    > div {
+      padding-top: 15px;
+      > p {
+        width: 100%;
+        text-align: center;
+        > span {
+          text-transform: uppercase;
+          font-size: 28px;
+          border-bottom: 5px solid $nav-hover;
+        }
+      }
+      > ul {
+        width: 100%;
+        > li {
+          list-style-type: none;
+          padding: 10px;
+          border: 2px solid $white;
+          i {
+            color: $nav-hover;
+            font-size: 28px;
+          }
+        }
+      }
+      > div {
+          margin-top: 15px;
+          .fa-heart {
+            color: $nav-hover;
+        }
+      }
+    }
+  }
+}

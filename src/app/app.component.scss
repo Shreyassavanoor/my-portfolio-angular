@@ -1,0 +1,15 @@
+@import "../assets/scss/variable";
+
+.main-content {
+    padding-top: 60px;
+    width: 100%;
+    height: calc(100% - 120px);
+    overflow: auto;
+}
+
+@media screen and (max-width: 425px) {
+    .main-content {
+        padding-top: 0;
+        height: calc(100% - 60px);
+    }
+}

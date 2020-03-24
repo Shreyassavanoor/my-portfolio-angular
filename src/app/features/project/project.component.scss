@@ -1,0 +1,55 @@
+@import "../../../assets/scss/variable";
+
+.project {
+  width: 75%;
+  margin: 0 auto;
+  > div {
+    padding-top: 70px;
+    > p {
+      width: 100%;
+      text-align: center;
+      > span {
+        text-transform: uppercase;
+        font-size: 28px;
+        border-bottom: 5px solid $nav-hover;
+      }
+    }
+    > div {
+      width: 70%;
+      margin: 0 auto;
+      > div {
+        padding: 20px;
+        border: 2px solid $grey;
+        margin: 10px 0 10px 0;
+        border-radius: 4px;
+        text-align: justify;
+        > label {
+          display: inline-block;
+          font-family: $mo-bold;
+          margin: 5px 0 5px 0;
+        }
+        > p, > span > span , > span > label , > span > label > span{
+            color: $darkmode-text-color-2;
+        }
+        > p, > span {
+            margin: 5px 0 5px 0;
+        }
+        > span > span , > span > label , > span > label > span {
+            font-family: $mo-light;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .project {
+    > div {
+      padding-top: 15px;
+      > div {
+        width: 100%;
+        margin: 0 0;
+      }
+    }
+  }
+}

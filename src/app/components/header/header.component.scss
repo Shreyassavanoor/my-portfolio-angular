@@ -1,0 +1,74 @@
+@import "../../../assets/scss/variable";
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 60px;
+  box-sizing: border-box;
+  background: $nav-background;
+  border-bottom: 3px solid $nav-border;
+  z-index: 999;
+  > ul {
+    display: inline-block;
+    > li {
+      display: inline-block;
+      padding: 20px;
+      cursor: pointer;
+      font-family: $mo-semibold;
+      > span {
+        font-size: 18px;
+        &:hover {
+          color: $nav-hover;
+        }
+        &:focus {
+          outline: 0;
+        }
+      }
+      &:focus {
+        outline: 0;
+      }
+      i {
+        font-size: 20px;
+        &:hover {
+          color: $nav-hover;
+        }
+      }
+    }
+    &:nth-child(2) {
+      float: right;
+    }
+  }
+}
+
+.active {
+  color: $nav-hover;
+}
+
+@media screen and (max-width: 425px) {
+  .header {
+    position: fixed;
+    width: 100%;
+    top: unset;
+    bottom: 0;
+    left: 0;
+    height: 60px;
+    box-sizing: border-box;
+    background: $nav-background;
+    border-bottom: 0;
+    border-top: 3px solid $nav-border;
+    > ul {
+      display: flex;
+      justify-content: space-between;
+      > li {
+        i {
+          font-size: 24px;
+          &:focus{
+              outline: 0;
+          }
+        }
+      }
+    }
+  }
+}

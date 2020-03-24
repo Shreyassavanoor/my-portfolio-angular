@@ -1,0 +1,14 @@
+@import "../../../assets/scss/variable";
+
+.fa-heart {
+    color: $nav-hover;
+}
+
+.footer {
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    background-color: $footer-background;
+    height: 60px;
+}
