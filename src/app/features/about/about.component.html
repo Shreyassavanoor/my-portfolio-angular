@@ -25,7 +25,7 @@
             <a href="{{myResume}}" target="_blank" class="resume view-resume" style="margin: 10px 0 10px 0;">
                 View My Resume
             </a>
-            <button class="resume download-resume"  (click)="downloadResume()">
+            <button class="resume download-resume" (click)="downloadResume()">
                 Download My Resume
             </button>
         </div>
@@ -37,5 +37,10 @@
         <div>
             <app-bar-chart [skills]="mySkills"></app-bar-chart>
         </div>
+    </div>
+</div>
+<div class="screen-blocker-download-resume" *ngIf="showScreenBlockerDownloadResume">
+    <div>
+        <i class="fa fa-spinner fa-spin"></i>
     </div>
 </div>

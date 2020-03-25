@@ -10,6 +10,7 @@ export class AboutComponent implements OnInit {
     bio: any = '';
     mySkills: any = [];
     myResume: any = '';
+    showScreenBlockerDownloadResume = false;
     constructor(private commonService: CommonServiceService) { }
 
     ngOnInit(): void {
@@ -37,6 +38,8 @@ export class AboutComponent implements OnInit {
     }
 
     downloadResume() {
+        var self = this;
+        this.showScreenBlockerDownloadResume = true;
         this.commonService.getFile().then((url) => {
             // `url` is the download URL
 
@@ -64,6 +67,7 @@ export class AboutComponent implements OnInit {
                     // For Firefox it is necessary to delay revoking the ObjectURL
                     window.URL.revokeObjectURL(blobURL);
                 }, 100);
+                self.showScreenBlockerDownloadResume = false;
             };
             xhr.open('GET', url);
             xhr.send();
