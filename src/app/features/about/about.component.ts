@@ -71,6 +71,10 @@ export class AboutComponent implements OnInit {
             };
             xhr.open('GET', url);
             xhr.send();
+        }, (error) => {
+            alert('Fetching my resume failed, please try again after some time...');
+            self.showScreenBlockerDownloadResume = false;
+            console.log(error);
         });
     }
 
