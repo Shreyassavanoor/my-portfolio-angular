@@ -7,10 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-    userName = "";
-    userEmail = "";
-    userMsg = "";
-
     contactList = [
         {
             text: 'EMAIL',
@@ -41,33 +37,5 @@ export class ContactComponent implements OnInit {
     constructor() { }
 
     ngOnInit(): void {
-    }
-
-    onContactValueChange(value, key) {
-        if(key === 'name') {
-            this.userName = value;
-        } else if(key === 'email') {
-            this.userEmail = value;
-        } else {
-            this.userMsg = value;
-        }
-    }
-
-    handleSendClick() {
-        if(!this.userName) {
-            alert('Please enter your name...');
-            return;
-        }
-        if(!this.userEmail) {
-            alert('Please enter your email...');
-            return;
-        }
-        if(!this.userMsg) {
-            alert('Please enter your message...');
-            return;
-        }
-        console.log(this.userName);
-        console.log(this.userEmail);
-        console.log(this.userMsg);
     }
 }

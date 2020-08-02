@@ -1,18 +1,6 @@
 <div class="contact" id="contact">
     <div>
         <p><span>Contact Me</span></p><span></span>
-        <div class="send-message-container">
-            <div>
-                <input type="text" placeholder="Enter your name..." value={{userName}} (input)="onContactValueChange($event.target.value, 'name')">
-                <input type="email" placeholder="Enter your email..." value={{userEmail}} (input)="onContactValueChange($event.target.value, 'email')">
-                <textarea placeholder="Enter your message..." value={{userMsg}} (input)="onContactValueChange($event.target.value, 'msg')"></textarea>
-            </div>
-            <div>
-                <button class="send-button" (click)="handleSendClick()">
-                    Send
-                </button>
-            </div>
-        </div>
         <ul>
             <li *ngFor="let contact of contactList">
                 <a href={{contact.link}} target="_blank">
