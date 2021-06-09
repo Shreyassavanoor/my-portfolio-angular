@@ -39,7 +39,7 @@ export class CommonServiceService {
         var storageRef = storage.ref();
 
         // Create a child reference
-        var resume = storageRef.child('Shreyas_SR_Resume.pdf');
+        var resume = storageRef.child('Shreyas_Savanoor_Ravindra_Resume.pdf');
 
         return resume.getDownloadURL();
     }

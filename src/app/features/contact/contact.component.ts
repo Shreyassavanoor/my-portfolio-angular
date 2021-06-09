@@ -16,8 +16,8 @@ export class ContactComponent implements OnInit {
         },
         {
             text: 'LINKEDIN',
-            value: 'shreyas-savanoor-b9911211a',
-            link: 'https://www.linkedin.com/in/shreyas-savanoor-b9911211a/',
+            value: 'shreyas-savanoor-ravindra',
+            link: 'https://www.linkedin.com/in/shreyas-savanoor-ravindra/',
             icon: 'fa fa-linkedin'
         },
         {

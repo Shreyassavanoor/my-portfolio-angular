@@ -42,7 +42,7 @@ export class HeaderComponent implements OnInit {
         },
         {
             label: 'LinkedIn',
-            link: 'https://www.linkedin.com/in/shreyas-savanoor-b9911211a/',
+            link: 'https://www.linkedin.com/in/shreyas-savanoor-ravindra/',
             icon: 'fa fa-linkedin'
         },
         {
